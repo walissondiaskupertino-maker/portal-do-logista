@@ -9,7 +9,8 @@ Design tokens ficam em [`frontend/src/styles/tokens.css`](frontend/src/styles/to
 a interface usa ícones Lucide e não usa emojis.
 
 Documentação de engenharia: [Spec.md](Spec.md) · [Plan.md](Plan.md) ·
-[Check.md](Check.md) · [Verification.md](Verification.md) · [docs/API.md](docs/API.md).
+[Check.md](Check.md) · [Verification.md](Verification.md) · [docs/API.md](docs/API.md) ·
+[docs/KANBAN.md](docs/KANBAN.md).
 
 ---
 

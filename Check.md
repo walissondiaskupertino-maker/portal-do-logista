@@ -145,7 +145,7 @@ Casos negativos relevantes:
 | --- | --- | --- |
 | Critérios de aceite verificados | Aprovado | CA-01 a CA-13 |
 | Layout conferido com o mockup | Pendente | `figura3-portal-lojista.png` ausente no workspace |
-| PR revisado | Pendente | Diretório não é repositório git |
+| PR revisado | Pendente | Repositório local criado (commit `6a04754`); falta remote e PR |
 | Merge na branch principal | Pendente | Depende do PR |
 | Validado no ensaio da demo (ORD-14, passo 3) | Atenção: Parcial | Fluxo da demo validado por QA headless; ensaio formal com o time pendente |
 
@@ -153,8 +153,9 @@ Casos negativos relevantes:
 
 1. **Mockup ausente** — a validação visual foi feita por consistência interna e
    responsividade, não por comparação lado a lado.
-2. **Repositório git ausente** — não há commit, PR ou merge; os arquivos estão apenas
-   no filesystem.
+2. **Repositório remoto ausente** — o repositório local foi inicializado na branch
+   `main` com o commit inicial `6a04754`, mas ainda não há remote, PR ou merge.
+   O quadro de acompanhamento está em [docs/KANBAN.md](docs/KANBAN.md).
 3. **Backend real** — a integração foi validada contra o contrato e as fixtures; não
    houve chamada a uma instância real em `localhost:8080`.
 4. **`npm audit` completo** — reporta 6 avisos em dependências de desenvolvimento

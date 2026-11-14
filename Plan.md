@@ -121,7 +121,7 @@ frontend/src/styles/tokens.css  design tokens (cores, raios, sombras, tipografia
 | Backend divergir do contrato assumido | Média | Alto | `docs/API.md` detalhado; camada `api/http` isolada para ajuste pontual |
 | Backend enviar flag de benchmark indevida | Baixa | Alto | Front revalida `k >= mínimo` em `evaluateBenchmarking` |
 | Mockup ausente | Alta | Médio | Tokens centralizados e layout baseado na descrição; validação pendente |
-| Ausência de repositório git | Alta | Médio | Documentação pronta; PR/merge pendentes de init/clone do repo |
+| Ausência de repositório remoto | Média | Médio | Repositório local criado (commit `6a04754`); remote, PR e merge pendentes de credencial |
 | Recharts crescer o bundle | Média | Médio | `manualChunks` separa `charts`; limite documentado em 700 kB |
 | Testes de gráfico dependerem de layout real | Média | Baixo | Gráficos validados no QA headless, não no jsdom |
 | Dependências dev com avisos de segurança | Baixa | Baixo | Produção com 0 vulnerabilidades; upgrade planejado |
@@ -151,7 +151,7 @@ frontend/src/styles/tokens.css  design tokens (cores, raios, sombras, tipografia
 
 ## 10. Próximos passos
 
-1. Fornecer o mockup ou o link do repositório git.
+1. Publicar o repositório remoto e fornecer o mockup.
 2. Rodar a validação visual e ajustar tokens/espaçamentos se necessário.
 3. Testar contra o backend real em `localhost:8080` com um token de homologação.
 4. Abrir PR com o resumo de `Verification.md` e realizar o ensaio da demo.
