@@ -5,14 +5,29 @@
   <meta charset="utf-8">
   <title>Página não encontrada | Portal do Lojista</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="O endereço acessado não existe ou foi movido. Volte para o painel do Portal do Lojista.">
+  <meta name="robots" content="noindex">
   <meta name="theme-color" content="#4f46e5">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <style>
+    /* Página estática, fora do bundle: replica os tokens de
+       frontend/src/styles/tokens.css para não depender de JS nem de CSS externo. */
     :root {
       color-scheme: light;
-      --brand: #4f46e5;
+      --bg: #f4f5fa;
+      --surface: #ffffff;
       --ink: #14161f;
       --ink-2: #4b5163;
       --line: #e8eaf2;
+      --brand: #4f46e5;
+      --brand-2: #6d64f5;
+      --brand-gradient: linear-gradient(135deg, var(--brand-2), var(--brand));
+      --radius-lg: 22px;
+      --font: 'Inter', 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+      --shadow-page: 0 30px 70px -40px rgba(20, 22, 31, 0.5);
     }
 
     * {
@@ -20,41 +35,50 @@
       margin: 0;
     }
 
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
+
     body {
       min-height: 100vh;
+      min-height: 100dvh;
       display: grid;
       place-items: center;
       padding: 24px;
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-family: var(--font);
       color: var(--ink);
-      background-color: #f4f5fa;
+      background-color: var(--bg);
       background-image:
         radial-gradient(900px 480px at 4% -12%, rgba(79, 70, 229, 0.12), transparent 62%),
         radial-gradient(800px 420px at 100% 0%, rgba(245, 165, 36, 0.12), transparent 58%);
+      background-repeat: no-repeat;
     }
 
     .card {
       width: min(440px, 100%);
       padding: 32px;
       text-align: center;
-      background: #fff;
+      background: var(--surface);
       border: 1px solid var(--line);
-      border-radius: 24px;
-      box-shadow: 0 30px 70px -40px rgba(20, 22, 31, 0.5);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-page);
     }
 
     .mark {
-      width: 52px;
-      height: 52px;
+      width: 48px;
+      height: 48px;
       margin: 0 auto 16px;
       display: grid;
       place-items: center;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #6d64f5, var(--brand));
-      color: #fff;
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
+      border-radius: 15px;
+      background: var(--brand-gradient);
+      color: var(--surface);
+      box-shadow: 0 8px 18px -8px rgba(79, 70, 229, 0.75);
+    }
+
+    .mark svg {
+      width: 27px;
+      height: 27px;
     }
 
     h1 {
@@ -73,26 +97,45 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      min-height: 44px;
       margin-top: 22px;
       padding: 11px 18px;
       border-radius: 11px;
       background: var(--brand);
-      color: #fff;
+      color: var(--surface);
       font-size: 13.5px;
       font-weight: 700;
       text-decoration: none;
+    }
+
+    a:hover {
+      background: #4338ca;
     }
 
     a:focus-visible {
       outline: 2px solid var(--brand);
       outline-offset: 3px;
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none;
+      }
+    }
   </style>
 </head>
 
 <body>
   <main class="card">
-    <div class="mark" aria-hidden="true">PL</div>
+    <div class="mark" aria-hidden="true">
+      <svg viewBox="0 0 32 32" focusable="false">
+        <path d="M6.5 13.5 9 6.8A2 2 0 0 1 10.9 5.5h10.2A2 2 0 0 1 23 6.8l2.5 6.7" fill="none"
+          stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+        <path d="M7 13.5h18v11a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v-11Z" fill="none" stroke="currentColor"
+          stroke-width="2.2" />
+        <path d="M13 26.5v-6h6v6" fill="none" stroke="currentColor" stroke-width="2.2" />
+      </svg>
+    </div>
     <h1>Página não encontrada</h1>
     <p>O endereço acessado não existe ou foi movido. Volte para o painel do Portal do Lojista.</p>
     <a href="/">Ir para o portal</a>
