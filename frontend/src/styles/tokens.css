@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Portal do Lojista — design tokens
+   --------------------------------------------------------------------------
+   Fonte única das primitivas visuais consumidas pelo app. Qualquer novo
+   componente deve usar estas variáveis em vez de repetir valores literais.
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* Superfícies e texto */
+  --bg: #f4f5fa;
+  --surface: #ffffff;
+  --surface-2: #f8f9fd;
+  --ink: #14161f;
+  --ink-2: #4b5163;
+  --ink-3: #646b80;
+  --line: #e8eaf2;
+  --line-strong: #dcdfeb;
+
+  /* Marca */
+  --brand: #4f46e5;
+  --brand-2: #6d64f5;
+  --brand-soft: #eef0ff;
+  --brand-ink: #3730a3;
+  --brand-hover: #4338ca;
+  --brand-ring: #cdd1f7;
+  --brand-gradient: linear-gradient(135deg, var(--brand-2), var(--brand));
+
+  /* Semânticas */
+  --green: #0f9d63;
+  --green-soft: #e7f8f0;
+  --green-ink: #07784c;
+  --amber: #b45309;
+  --amber-soft: #fff5e5;
+  --danger: #cf3127;
+  --danger-soft: #fdeceb;
+  --violet: #7c3aed;
+  --violet-soft: #f2ecff;
+
+  /* Destaque dourado (cupom / selos) */
+  --gold: #f5a524;
+  --gold-soft: #ffd166;
+  --gold-ink: #8a5a00;
+  --gold-gradient: linear-gradient(135deg, var(--gold-soft), var(--gold));
+
+  /* Formas e profundidade */
+  --radius-lg: 22px;
+  --radius: 16px;
+  --radius-sm: 12px;
+
+  --shadow-sm: 0 1px 2px rgba(20, 22, 31, 0.05);
+  --shadow-card: 0 1px 2px rgba(20, 22, 31, 0.04), 0 16px 32px -24px rgba(20, 22, 31, 0.35);
+  --shadow-brand: 0 8px 18px -8px rgba(79, 70, 229, 0.75);
+
+  /* Tipografia */
+  --font: 'Inter', 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
