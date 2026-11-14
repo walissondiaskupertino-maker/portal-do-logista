@@ -5,8 +5,10 @@ cross-shopping e disparo de cupom, consumindo a API do shopping com o token da l
 
 Stack: **React 18 + TypeScript + Vite + Recharts + lucide-react**.
 
-Design tokens ficam em [`frontend/src/styles/tokens.css`](frontend/src/styles/tokens.css);
-a interface usa ícones Lucide e não usa emojis.
+Design tokens ficam em [`frontend/src/styles/tokens.css`](frontend/src/styles/tokens.css):
+cores semânticas, escala de espaçamento e tipografia, raios, sombras, controles,
+movimento e cores para gráficos. `src/styles/global.css` importa a fonte única e
+consome os tokens compartilhados. A interface usa ícones Lucide e não usa emojis.
 
 Documentação de engenharia: [Spec.md](Spec.md) · [Plan.md](Plan.md) ·
 [Check.md](Check.md) · [Verification.md](Verification.md) · [docs/API.md](docs/API.md) ·

@@ -35,7 +35,7 @@
 | CA-07 | RF-13 | `CouponCard.tsx` | Teste “desabilita o CTA quando o público é zero” | Aprovado |
 | CA-08 | RF-14 | `States.tsx` + cards | Testes de vazio/erro/skeleton + cenários `?cenario=vazio` e `?cenario=erro` | Aprovado |
 | CA-09 | RF-01, RF-02 | `src/lib/auth.ts`, `src/lib/api.ts` | QA “tela mostra a loja do token” e “sem seletor manual” + inspeção dos endpoints | Aprovado |
-| CA-10 | RF-16 | `src/styles/global.css` | QA em 1440, 1024, 768 e 390 px sem overflow | Aprovado |
+| CA-10 | RF-16 | `src/styles/global.css` | QA responsivo em Verification: 1424, 768 e 390 px sem overflow; testes anteriores em 1440 e 1024 | Aprovado |
 | CA-11 | RNF-03 | Todos os componentes | QA com listeners de `console` e `pageerror` nos 4 cenários | Aprovado |
 | CA-12 | RNF-01, RNF-02 | `package.json`, `vite.config.ts` | `npm test` e `npm run build` executados | Aprovado |
 | CA-13 | RNF-09 | `src/components/icons.tsx` + `frontend/src/styles/tokens.css` | 23 SVGs Lucide no DOM com `aria-hidden=true`, tokens resolvidos no CSS e QA sem emojis | Aprovado |
@@ -163,3 +163,17 @@ Casos negativos relevantes:
    O upgrade exige salto de major e está registrado em `Verification.md`.
 5. **Acessibilidade** — boas práticas semânticas aplicadas, mas sem auditoria axe
    automatizada nesta entrega.
+## 8. QA responsivo completo (2026-11-14)
+
+Resultado: **24/24 checks aprovados**.
+
+| Viewport | scrollWidth | KPIs / cards | Largura dos graficos (px) | Overflow | Console |
+| --- | ---: | --- | --- | --- | --- |
+| 1424x900 | 1424 | 4 / 4 | 487 | Nao | Limpo |
+| 768x1024 | 768 | 4 / 4 | 674, 674 | Nao | Limpo |
+| 390x844 | 390 | 4 / 4 | 320, 320 | Nao | Limpo |
+
+Cupom: CTA habilitado, sucesso, codigo e toast aprovados. Periodo: 7d selecionado
+e refletido nos dados. Cenarios bloqueado, vazio e erro aprovados. Evidencias e
+limites do escopo estao em [Verification.md](Verification.md); arquivos em
+C:\Users\Eduarda\AppData\Local\Temp\opencode\qa-portal\.

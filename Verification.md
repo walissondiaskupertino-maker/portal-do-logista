@@ -177,6 +177,32 @@ Cenários e viewports:
 | 768×1024 | Não | 4 | 720/720/720/720 px | Limpo | Aprovado |
 | 390×844 | Não | 4 | 358/358/358/358 px | Limpo | Aprovado |
 
+#### Reexecucao do QA responsivo completo - 2026-11-14
+
+O QA foi reexecutado em Chrome headless, modo demo, servidor Vite em
+http://localhost:5199 e deviceScaleFactor 1. O roteiro ajustado usa o valor do
+select e o texto de periodo renderizado nos elementos KPI; a versao anterior
+chamava uma funcao do Node dentro do contexto do navegador e expirava por isso.
+
+Resultado: **24/24 checks aprovados**. Cobertura: tres viewports, estado default,
+CTA de cupom, sucesso/codigo/toast, selecao de 7 dias e reflexo dos dados, estados
+bloqueado/vazio/erro e console limpo.
+
+| Viewport | scrollWidth / largura | KPIs / cards | Largura dos graficos (px) | Console | Resultado |
+| --- | --- | --- | --- | --- | --- |
+| 1424x900 | 1424 / 1424 | 4 / 4 | 487 | Limpo | Aprovado |
+| 768x1024 | 768 / 768 | 4 / 4 | 674, 674 | Limpo | Aprovado |
+| 390x844 | 390 / 390 | 4 / 4 | 320, 320 | Limpo | Aprovado |
+
+Fluxos funcionais: cupom habilitado, sucesso com codigo PICO15-XXXX e toast;
+periodo 7d selecionado e refletido no texto de periodo dos KPIs. Cenarios bloqueado,
+vazio e erro aprovados, todos com console limpo.
+
+Evidencias fora do repositorio: qa-results-responsive-complete.json e screenshots
+shot-responsive-1424.png, shot-responsive-768.png, shot-responsive-390.png,
+shot-bloqueado.png, shot-vazio.png e shot-erro.png em
+C:\Users\Eduarda\AppData\Local\Temp\opencode\qa-portal.
+
 Fluxo principal validado:
 
 - loja do token exibida (`Studio Aura`);
